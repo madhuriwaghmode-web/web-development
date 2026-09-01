@@ -1,0 +1,189 @@
+
+@import "tailwindcss";
+
+/* =========================
+   DARK MODE SETUP
+========================= */
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* =========================
+   THEME
+========================= */
+
+@theme {
+  --color-brand-50: #eef6f6;
+  --color-brand-100: #d6ebea;
+  --color-brand-200: #b0d7d5;
+  --color-brand-300: #82bdba;
+  --color-brand-400: #55a19d;
+  --color-brand-500: #2f8480;
+  --color-brand-600: #206966;
+  --color-brand-700: #1b5452;
+  --color-brand-800: #184443;
+  --color-brand-900: #163938;
+
+  --color-risk-low: #1b8a5a;
+  --color-risk-moderate: #b8860b;
+  --color-risk-high: #c53030;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+/* =========================
+   BASIC
+========================= */
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: #f4f7f7;
+  color: #1a2b2a;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+html.dark body {
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+
+/* White backgrounds */
+
+html.dark .bg-white {
+  background-color: #1e293b !important;
+}
+
+/* Light backgrounds */
+
+html.dark .bg-slate-50 {
+  background-color: #0f172a !important;
+}
+
+html.dark .bg-slate-100 {
+  background-color: #334155 !important;
+}
+
+/* =========================
+   TEXT COLORS
+========================= */
+
+html.dark .text-slate-900 {
+  color: #f8fafc !important;
+}
+
+html.dark .text-slate-800 {
+  color: #f1f5f9 !important;
+}
+
+html.dark .text-slate-700 {
+  color: #e2e8f0 !important;
+}
+
+html.dark .text-slate-600 {
+  color: #cbd5e1 !important;
+}
+
+html.dark .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+html.dark .text-slate-400 {
+  color: #94a3b8 !important;
+}
+
+/* =========================
+   BORDERS
+========================= */
+
+html.dark .border-slate-200 {
+  border-color: #334155 !important;
+}
+
+html.dark .border-slate-100 {
+  border-color: #334155 !important;
+}
+
+html.dark .border-slate-50 {
+  border-color: #334155 !important;
+}
+
+/* =========================
+   HOVER
+========================= */
+
+html.dark .hover\:bg-slate-50:hover {
+  background-color: #334155 !important;
+}
+
+html.dark .hover\:bg-slate-100:hover {
+  background-color: #334155 !important;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+html.dark input,
+html.dark textarea,
+html.dark select {
+  background-color: #334155;
+  color: #f1f5f9;
+  border-color: #475569;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #94a3b8;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+html.dark table {
+  color: #e2e8f0;
+}
+
+/* =========================
+   DARK MODE TRANSITION
+========================= */
+
+html.dark body,
+html.dark .bg-white,
+html.dark .bg-slate-50,
+html.dark .bg-slate-100 {
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* =========================
+   PRINT
+========================= */
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
+
